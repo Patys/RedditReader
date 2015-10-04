@@ -1,7 +1,11 @@
 var app = {
 	
 	initialize : function() {
-		alert("yes, its works");
+		document.addEventListener('deviceready', this.onDeviceReady, false);
+	},
+	
+	onDeviceReady : function() {
+		alert("Hello");
 	}
 };
 
