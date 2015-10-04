@@ -6,6 +6,19 @@ var app = {
 	},
 	
 	onDeviceReady : function() {
+		var jqxhr = $.getJSON( "https://www.reddit.com/.json", function() {
+		  alert( "success" );
+		})
+		  .done(function() {
+		    alert( "second success" );
+		  })
+		  .fail(function() {
+		    alert( "error" );
+		  })
+		  .always(function() {
+		    alert( "complete" );
+		  });
+		  
 		$.getJSON("https://www.reddit.com/.json")
 			.done(function( json ) {
 				var reddit_data = json;
